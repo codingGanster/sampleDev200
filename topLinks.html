@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ul li{
+display: block;
+margin-top: 20px;
+list-style: none;
+}
+ul li a{
+    border: 1px solid blue;
+    border-radius: 5px;
+    background-color: #404;
+    text-decoration: none;
+    color: #fff;
+    padding: 2px;
+}
+   
+#sidebar{
+    padding-top: 5px;
+    border-radius: 5px;
+    background-color: #000;
+   opacity: 20%;
+    text-align: center;
+    width: 300px;
+    height: 350px;
+    transition: all 6s;
+}
+#sidebar{
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+strong{
+    font-size: 20px;
+}
+
+#check:checked ~ #sidebar{
+    display: block;
+   
+}
+#check:checked ~ main{
+    display: none;
+}
+   
+hr{
+    background-color: red;
+    height: 5px;
+    animation: changeBorder linear 2s infinite;
+}
+
+
+/* 
+ANIMATION STYLES
+*/
+@keyframes changeBorder{
+    50%{
+        width: 50px;
+    }
+    100%{
+        width: 100vw;
+    }
+}
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="check">
+    <label for="check">
+        <strong>&#9776;</strong>
+    </label>
+    <nav id="sidebar">
+        <ul>
+            <li><a href="home">home</a></li>
+            <li><a href="home">services</a></li>
+            <li><a href="home">projects</a></li>
+            <li><a href="home">works</a></li>
+            <li><a href="home">more</a></li>
+        </ul>
+    </nav>
+    <main>
+        <p id="time"></p>
+        <hr>
+       <video src="music/"></video>
+    </main>
+    <script>
+        // to display current time
+        setInterval( function()
+        {
+            const time = document.getElementById("time");
+            time.innerHTML= new Date().toLocaleTimeString();
+        }
+        )();
+    </script>
+</body>
+</html>

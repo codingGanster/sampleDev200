@@ -1,0 +1,57 @@
+body{
+    background: #000;
+    text-align: center;
+}
+p{
+    color: #007;
+}
+
+.cover{
+   margin-top: 200px;
+}
+#loginbtn{
+    border: solid 1px blue;
+    border-radius: 10px;
+    width: 190px;
+    padding: 5px;
+    background: red;
+    color: #fff;
+    animation: bliks 3s linear infinite;
+}
+#click{
+    border: solid 1px black;
+    color: #fff;
+    border-radius: 4px;
+    padding: 5px;
+    background: hwb(20 0% 0%);
+    text-decoration: none;
+
+}
+#click:hover{
+    background: blue;
+
+}
+form{
+    background: #000;
+    border: 1px solid #000;
+    border-radius: 7px;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    padding: 7px;
+    
+    }
+
+    /* KEYFRAMES STYLES */
+    
+    @keyframes bliks{
+        50%{
+            background: rgb(0,100,0);
+         width: 200px;
+        }
+        100%{
+            background: rgb(0,50,0);
+            width: 600px;
+          
+        }
+    }
